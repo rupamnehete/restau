@@ -1,0 +1,24 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">restaurantId</th>
+        <th scope="col">startTime</th>
+        <th scope="col">endTime</th>
+        <th scope="col">Edit</th>
+ 
+      </tr> 
+    </thead>
+    <tbody>
+      <tr *ngFor="let resto of collection ">
+        <td>{{resto._id}}</td>
+        <td>{{resto.restaurantId}}</td>
+        <td>{{resto.startTime}}</td>
+        <td>{{resto.endTime}}</td>
+        <td><a routerLink="/update/{{resto._id}}"><i class="fa fa-edit" style="font-size:30px;color:red"></i></a>&nbsp;
+        <i (click)="deleteResto(resto._id)"class="fa fa-trash" style="font-size:30px;color:red"></i>
+        </td>
+
+    </tr>
+    </tbody>
+  </table>

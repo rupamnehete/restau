@@ -1,0 +1,37 @@
+<h1>Add</h1>
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success</strong> Your data added succesfully !!!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+<form [formGroup]="addRestaurant" (ngSubmit)="createResto()">
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" class="form-control" placeholder="enter name" formControlName="restaurantname">
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" formControlName="email">
+      </div>
+
+      <div class="form-group">
+        <label>Photo</label>
+        <input type="text" class="form-control" formControlName="photo">
+      </div>
+ 
+      <div class="form-group">
+        <label>openingtime</label>
+        <input type="time" class="form-control" formControlName="openingtime">
+      </div>
+ 
+      <div class="form-group">
+        <label>closingtime</label>
+        <input type="time" class="form-control" formControlName="closingtime">
+      </div>
+
+  
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
